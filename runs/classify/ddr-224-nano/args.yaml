@@ -1,17 +1,16 @@
 task: classify
 mode: train
 model: yolo11n-cls.pt
-data: e:\Ghozy\Tel-U\Mulmed Lab\Project for SG\Intro\diabetic retinopathy classification
-  for study group\DDR-dataset-1
+data: c:\Gojii\SG Mulmed\diabetic-retinopathy-classification-for-study-group\DDR-dataset-1
 epochs: 5
 time: null
 patience: 100
-batch: 16
+batch: 64
 imgsz: 224
 save: true
 save_period: -1
 cache: false
-device: cpu
+device: 0
 workers: 8
 project: null
 name: ddr-224-nano
@@ -26,7 +25,7 @@ rect: false
 cos_lr: false
 close_mosaic: 10
 resume: false
-amp: true
+amp: false
 fraction: 1.0
 profile: false
 freeze: null
@@ -37,6 +36,7 @@ dropout: 0.0
 val: true
 split: val
 save_json: false
+save_hybrid: false
 conf: null
 iou: 0.7
 max_det: 300
@@ -96,11 +96,11 @@ fliplr: 0.5
 bgr: 0.0
 mosaic: 1.0
 mixup: 0.0
-cutmix: 0.0
 copy_paste: 0.0
 copy_paste_mode: flip
 auto_augment: randaugment
 erasing: 0.4
+crop_fraction: 1.0
 cfg: null
 tracker: botsort.yaml
 save_dir: runs\classify\ddr-224-nano
