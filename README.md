@@ -1,5 +1,35 @@
 # Diabetic Retinopathy Classification (Study Group)
 
+**Author:** Athila Ramdani Saputra (103012300132)
+
+## Improved Training Results
+
+Notebook `train_improved.ipynb` dibuat untuk mengungguli baseline model (**75.7% top-1 accuracy**) yang ditraining dengan GPU RTX 5070 Ti.
+
+### Hasil Akhir:
+- **Top-1 Accuracy (ours):** 0.7916 (79.16%)
+- **Top-1 Accuracy (baseline):** 0.7570 (75.70%)
+- **Selisih:** +3.46%
+- **Status:** ✅ **BERHASIL MENGUNGGULI BASELINE!**
+
+### Analisis Masalah Percobaan Sebelumnya:
+- Percobaan 1: CPU, 15 epochs, AdamW `lr0=0.01` → **68.8%** ❌ (lr terlalu besar untuk AdamW)
+
+### Strategi Perbaikan (v2):
+1. **Learning Rate Fix**: `lr0=0.001` — nilai yang benar untuk AdamW (10x lebih kecil dari SGD default).
+2. **Epochs**: Ditingkatkan ke **50** dengan `patience=15` early stopping.
+3. **Image Size**: Dinaikkan ke **320** untuk menangkap detail retina lebih baik.
+4. **Augmentasi yang Tepat untuk Medis**:
+   - `flipud=0.0` — citra retina tidak di-flip vertikal (tidak valid secara medis)
+   - `fliplr=0.5` — flip horizontal tetap valid
+   - `degrees=10` — rotasi kecil yang wajar
+   - `mixup=0.1` — regularisasi ringan
+   - `label_smoothing=0.1` — mencegah over-confident predictions
+5. **Optimizer**: AdamW dengan `lr0=0.001` yang benar
+6. **Cosine LR Schedule**: Konvergensi yang halus
+
+---
+
 This repository contains a YOLO11 image classification workflow for diabetic retinopathy (DR) using a Roboflow-exported dataset.
 
 ## Project Goal
