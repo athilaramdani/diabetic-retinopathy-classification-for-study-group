@@ -1,0 +1,19 @@
+Halo teman-teman Study Group Multimedia Laboratory 👋
+
+Untuk assignment kali ini, silakan akses repository berikut:
+https://github.com/ZerXXX0/diabetic-retinopathy-classification-for-study-group
+
+Tugas yang perlu dikerjakan:
+1. Fork repository tersebut ke akun GitHub masing-masing
+2. Lakukan training model sesuai yang ada di repo
+3. Usahakan untuk *mengungguli performa baseline model*
+4. Push hasil pekerjaan kalian ke repository masing-masing
+5. Upload link repository ke link pengumpulan, jangan lupa jadikan view nya public.
+
+Pastikan semua langkah dilakukan dengan benar dan hasil terbaik yang bisa kalian capai. Deadline dari tugas ini adalah hari senin tanggal 4 Mei jam 23.59. 
+
+Link Pengumpulan: https://forms.gle/fS3ceSmq4fVJyAWm8
+
+Jika ada pertanyaan atau kendala, silakan diskusikan di grup.
+
+Terima kasih!

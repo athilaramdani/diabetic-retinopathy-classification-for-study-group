@@ -1,0 +1,14 @@
+# 1. Masuk ke folder repo
+cd "f:\telu\semester 6\mulmed\diabetic-retinopathy-classification-for-study-group"
+
+# 2. Buat virtual environment
+python -m venv .venv
+
+# 3. Aktifkan venv
+.venv\Scripts\activate
+
+# 4. Install dependencies
+pip install ultralytics roboflow
+
+# 5. Jalankan training
+python train_improved.py
